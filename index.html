@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Litepicker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/nocss/litepicker.js"></script>
+    <style>
+      :root {
+        --litepicker-container-months-color-bg:{
+          color: #fff;
+        }
+
+
+      }
+
+
+      .litepicker .container__days .day-item {
+        border-radius: 100px;
+
+      }
+      .litepicker .container__days .day-item:hover {
+        color: white;
+        background: orange;
+      }
+      .day-item is-start-date data-time {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+      .litepicker .container__days{
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+      .litepicker .container__days .is-today {
+        tabindex="0" {
+        --litepicker-is-today-color: #fff;
+        border-line-left-radius: 100px;
+        border-line-right-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Виджет Litepicker</h1>
+    <input id="litepicker" />
+    <date-filter>
+      <style>
+        :host {
+          /*padding-right: 12px;
+            padding-bottom: 8px;*/
+          display: flex;
+        }
+
+        input {
+          font-size: 16px;
+          line-height: 22px;
+          border: none;
+          margin: unset;
+          padding: unset;
+          padding-bottom: 8px;
+          background: transparent;
+        }
+
+        :host:before {
+          content: "";
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          background-image: url("/assets/Icon/Calendar.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 16px;
+        }
+      </style>
+    </date-filter>
+  </body>
+  <script>
+    const picker = new Litepicker({
+      element: document.getElementById("litepicker")
+    });
+  </script>
+</html>

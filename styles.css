@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "PT Root UI";
+  src: url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Regular.woff2")
+      format("woff2"),
+    url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Root UI";
+  src: url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Medium.woff2")
+      format("woff2"),
+    url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Root UI";
+  src: url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Bold.woff2")
+      format("woff2"),
+    url("https://ekaterinburg.cultozon.ru/assets/fonts/PT-Root-UI_Bold.woff")
+      format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+:root {
+  /* change background color for .container__months */
+  font-family: "PT Root UI", sans-serif;
+  --litepicker-container-months-color-bg: #ffffff !important;
+
+  --litepicker-day-color: #000000;
+  --litepicker-month-weekday-color: #000000;
+  --litepicker-is-start-color-bg: #ef8031;
+  --litepicker-is-end-color-bg: var(--litepicker-is-start-color-bg);
+  --litepicker-is-in-range-color: rgba(243, 156, 95, 0.25);
+  --litepicker-day-width: 32px;
+}
+
+.litepicker {
+  font-family: "PT Root UI", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffffff;
+  /* Color/15% Black */
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.litepicker .container__months {
+  padding: 10px;
+}
+
+.litepicker .container__months .month-item-weekdays-row > div {
+  font-size: 14px;
+}
+
+.litepicker .container__days .day-item.is-today {
+  color: var(--litepicker-day-color);
+  border: 1px solid #292a30;
+  box-sizing: border-box;
+  border-radius: 18px;
+}
+
+.litepicker .container__days .day-item.is-start-date,
+.litepicker .container__days .day-item.is-end-date {
+  border-radius: 100px;
+}
+
+.litepicker .container__days .day-item {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.litepicker .container__days .day-item:hover {
+  color: white;
+  box-shadow: unset;
+  border-radius: 100px;
+  background: #ffb47b;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/plugins/mobilefriendly.js"></script>
+  </head>
+  <body>
+    <h1>
+      2 title
+    </h1>
+    <input type="text" id="litepicker" />
+  </body>
+  <script>
+    const picker = new Litepicker({
+      element: document.getElementById("litepicker"),
+      plugins: ["mobilefriendly"],
+      singleMode: false,
+      lang: "ru-RU"
+    });
+    const test = {
+      abc: true,
+      def: 321,
+      element: document.getElementById("litepicker")
+    };
+
+    window.test = test;
+  </script>
+</html>
